@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>클래스 연습</title>
+    <style>
+        .class_box {
+            width: 300px;
+            height: 500px;
+            background-color: tomato;
+            margin: 16px;
+        }
+        .text_class_box {
+            color: red;
+            color: violet;
+            color: coral;
+            /* 속성명: 속성값; 개발언어에서의 세미콜론은 마침표 역할 */
+            /* 속성은 가장 아래있는게 우선적으로 덮여씌인다 */
+        }
+        .text_class_box {
+            color: rgb(123, 33, 22);
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+    클래스 작성 규칙
+        1. class = "원하는 클래스 이름 지정"
+        2. 클래스 이름 지정 할 땐 의미있는 클래스 이름을 지정하는 것이 좋음
+        3. 클래스 이름은 대소문자를 구분하며 숫자로 시작할 수 없다
+
+    클래스 특징
+         여러개의 태그에 중복된 클래스가 부여되어있다면 같은 속성 지정 가능
+         스타일에서 사용이 가능하고 자바 스크립트에서도 사용이 가능함
+         클래스는 .으로 접근을 한다
+    -->
+    <div class="class_box"></div>
+    <div class="text_class_box">혼자만 다른 클래스</div>
+    <div class="class_box"></div>
+
+    <div class="class_test"></div>
+    <div class="class_test"></div>
+    <div class="class_test"></div>
+</body>
+</html>
