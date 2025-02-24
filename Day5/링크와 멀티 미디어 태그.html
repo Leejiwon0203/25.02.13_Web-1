@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>링크와 멀티 미디어 태그</title>
+    <style>
+        #top {
+            height: 2000px;
+            background-color: coral;
+        }
+    </style>
+</head>
+<body>
+    <!-- <section id="top">
+        <p>맨 위</p>
+    </section> -->
+   <a href="https://www.youtube.com/watch?v=iU4aPuGZETk" target="_blank">
+    <!-- 
+        target="
+            _self : 현재 창에서 열기
+            _blank : 새 창에서 열기
+            _parent : 부모 창에서 열기
+            _top : 최상위 창에서 열기"
+            
+            보통은 blank를 사용함
+    -->
+    유튜브 바로가기
+   </a> 
+   <hr>
+   <a href="../Day4/텍스트태그.html">Day 4 - text tag file
+   <!-- 
+        a태그 경로 사용법
+            / : 최상위부터 접근 = 모든 파일에서만 접근
+            ./ : 현재 위치에서 접근 = 현재 파일 안에서만 접근
+            ../ : 상위 폴더부터 접근 = 현재 파일 폴더를 나가서 접근(가장 많이 사용)
+     -->
+    </a>
+    <hr>
+    <a href="#top">맨 위로 가기</a>
+    <hr>
+    <a href="mailto:akdong0203@naver.com">메일 전송하기</a>
+    <hr>
+    <a href="tel:01050643070">전화번호로 연결하기</a>
+    <!-- 모바일로 연결하면 전화로 바로 연결이 가능함 -->
+    <hr>
+    <a href="./3,4,5,6일차 정리본.pdf" download="정리본">PDF 다운받기</a>
+    <hr>
+    <img src="./image.png" alt="이미지 복사 후 붙여넣기">
+    <img src="https://image.utoimage.com/preview/cp872722/2022/12/202212008519_206.jpg" alt="이미지 주소 복사" title="이미지 주소로 복사해서 가져오기">
+    <!--
+        이미지 가져오는 방법
+            1. 이미지 주소 복사해서 가져오기 (링크가 사라지면 사용 불가능)
+            2. 이미지 복사 후 붙여넣기
+            ★ 이미지는 저작권이 있기 때문에 사용할 때 주의해야 함
+    -->
+</body>
+</html>
