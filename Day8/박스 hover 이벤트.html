@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박스 hover 이벤트</title>
+    <style>
+        .box {
+            width: 500px;
+            height: 500px;
+            background-color: yellow;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.5s;
+        }
+        .box_text {
+            color: yellowgreen;
+            font-size: 50px;
+            font-weight: 900;
+            transition: 0.5s;
+        }
+
+        .box:hover {
+            background-color: black;
+            transition: 0.5s;
+            /* 뗄때도 스르륵 변하고싶으면 박스 자체에 트랜지션 걸기 */
+            
+        }
+
+        .box:hover .box_text {
+            /* 후손 선택 근데 자식도 가능함 */
+            color: white;
+            /* 박스에 올렸을때 박스 텍스트가 바뀌고 싶을때 */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p class="box_text">박스입니다</p>
+    </div>
+</body>
+</html>

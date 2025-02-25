@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 문법</title>
+    <style>
+        /* h1은 선택자 또는 셀렉터라고도 함
+        선택자는 .클래스명이나 #id명 등이 올 수 있다 */
+        h1 {
+            color: coral;
+            font-size: 50px;
+            /* 속성(프로퍼티) : 속성값(벨류); */
+            /* 이 한 줄은 데클러레이션이라고 하지만 잘 사용하지 않음 */
+        }
+
+        #id_section {
+            background-color: lightpink;
+        }
+        #id_section > h2 {
+            /* 자식 선택 */
+            color: rgb(255, 0, 55);
+        }
+        article span {
+            /* 후손 선택 */
+            color: blue;
+        }
+        .front_end_lang ~ li {
+            /* 형제 선택 */
+            /* ~은 뒤에 오는 것 전부 */
+            /* +는 뒤에 오는 인접한 것 하나 */
+            background-color: darksalmon;
+        }
+        .p_tag,
+        h3,
+        #span_tag {
+            /* 그룹 선택 */
+            background-color: brown;
+            color: white;
+            font-size: 24px;
+            font-weight: 600;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>클래스 문법 실습</h1>
+    <section id="id_section">
+        <h2 class="red_text">아이디 선택자</h2>
+    </section>
+    <h2 class="red_text">아이디 선택자</h2>
+
+    <article>
+        <div>
+            나는 이렇게 글을 작성하다가 
+            <span class="color_change">이 부분만 색깔 변경</span>
+            할겁니다
+        </div>
+        <section>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis nesciunt quisquam saepe ipsam sapiente magnam nostrum ipsum modi, animi ratione. Minima eveniet amet repellat impedit quasi magni laborum corrupti ipsum.
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate voluptatem quidem totam quam, perspiciatis ipsum quis pariatur natus exercitationem laborum rerum nostrum molestiae nulla, ab labore debitis corrupti sequi explicabo?
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam placeat dolores quos, exercitationem deserunt itaque ullam consequuntur sed totam a at, molestias voluptates odio, dolore accusantium modi sit? Ipsum, consequatur.</span>
+            </p>
+        </section>
+    </article>
+    <ul>
+        <li>html</li>
+        <li>css</li>
+        <li class="front_end_lang">javascript</li>
+        <li>react</li>
+        <li>vue</li>
+    </ul>
+    
+    <div>
+        <p class="p_tag">p태그</p>
+        <!-- p.p_tag -->
+        <h3>헤딩3</h3>
+        <span id="span_tag">span태그</span>
+        <!-- span#span_tag -->
+    </div>
+</body>
+</html>
