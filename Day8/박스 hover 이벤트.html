@@ -21,10 +21,11 @@
             transition: 0.5s;
         }
 
-        .box:hover {
+        .box:active {
             background-color: black;
             transition: 0.5s;
             /* 뗄때도 스르륵 변하고싶으면 박스 자체에 트랜지션 걸기 */
+            /* active는 클릭하면 변경된다 */
             
         }
 
@@ -32,6 +33,9 @@
             /* 후손 선택 근데 자식도 가능함 */
             color: white;
             /* 박스에 올렸을때 박스 텍스트가 바뀌고 싶을때 */
+        }
+        * {
+            margin: 0;
         }
     </style>
 </head>
