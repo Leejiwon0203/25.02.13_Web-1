@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>박스 hover 이벤트</title>
     <style>
+        body {
+            margin: 0;
+        }
+        * {
+            margin: 0;
+            /* 별은 전체 선택하는 최상위 선택자
+            하지만 아래에 작성한 것이 우선적으로 적용되긴 함 */
+        }
         .box {
             width: 500px;
             height: 500px;
@@ -21,7 +29,7 @@
             transition: 0.5s;
         }
 
-        .box:hover {
+        .box:active {
             background-color: black;
             transition: 0.5s;
             /* 뗄때도 스르륵 변하고싶으면 박스 자체에 트랜지션 걸기 */
@@ -29,10 +37,11 @@
             
         }
 
-        .box:hover .box_text {
+        .box:active .box_text {
             /* 후손 선택 근데 자식도 가능함 */
             color: white;
             /* 박스에 올렸을때 박스 텍스트가 바뀌고 싶을때 */
+            /* 보통 클릭 하는건 자바로 많이 활용한다 */
         }
     </style>
 </head>

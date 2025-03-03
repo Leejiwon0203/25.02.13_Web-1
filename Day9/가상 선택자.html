@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>가상 선택자</title>
+    <style>
+        .japanese_food li:last-child {
+            color : blueviolet;
+            /* 마지막 자식 선택 */
+        }
+        .japanese_food > li:nth-child(even) {
+            color: red;
+            /* 특수한 자식 선택
+            괄호 안에 숫자를 넣으면 원하는 번호 숫자가 되고
+            even을 넣으면 짝수번째 숫자들이 선택된다
+            odd는 홀수번째 숫자 애들이 선택됨 */
+        }
+    </style>
+</head>
+<body>
+    <ul class="japanese_food">
+        <li>초밥</li>
+        <li>가츠동</li>
+        <li>우동</li>
+        <li>라멘</li>
+        <li>소바</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상 요소</title>
+    <style>
+        .box > p::before {
+            content: "보통 꾸밈을 위한 것";
+            /* 보통 텍스트를 잘 넣지 않고 꾸밈을 위해 사용한다
+            ex) 뭐 텍스트 박스 앞에 선을 주고 싶을 때? */
+            /* 작은 따옴표도 가능하지만 큰 따옴표는 문자 열을 감싸고
+            작은 따옴표는 숫자같은 것을 담는다 */
+            /* 얘는 텍스트로 인식이 안되는 가상 요소임
+            그래서 드래그를 하려고 해도 드래그가 안됨! */
+            /* 그래서 브라우저도 무슨 내용이 있는지 읽지 못함! */
+            color: red;
+        }
+        .box > p::after {
+            content: "연속 4일 쉰다니 너무 감격스러워요";
+            color: blue;
+        }
+        .sample > p::before {
+            width: 200px;
+            height: 1px;
+            background-color: black;
+            content: "";
+            display: block;
+            /* 지금 블록 태그를 넣어서 알아서 영역을 차지하게 만든것 */
+        }
+        .sample > p::after {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            content: "";
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        가상 요소는 :: before, after를 사용하는데
+        before은 이전 after은 이후가 된다
+    -->
+    <div class="box">
+        <p>내일은 목요일입니다</p>
+    </div>
+
+    <div class="sample">
+        <p>실습용</p>
+    </div>
+</body>
+</html>
