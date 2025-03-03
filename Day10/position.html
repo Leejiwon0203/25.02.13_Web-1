@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        .container {
+            position: relative;
+            /* 기준으로 만들어줄 부모 요소에 부여해주는 것 */
+            width: 1000px;
+            border: 1px solid red;
+            height: 500px;
+            margin: 50px;
+        }
+        .box {
+            position: absolute;
+            /* absolute : 스케치북처럼 합쳐져있는 상태
+            기준점을 토대로 움직이고 싶은 요소에게 부여함
+            기준점이 없으면 브라우저를 기준으로 움직인다 */
+            width: 150px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+        }
+        .b1 {
+            background-color: coral;
+        }
+
+        .b2 {
+            background-color: cornflowerblue;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .b3 {
+            background-color: darkolivegreen;
+            bottom: 0;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- fixed 기능이랑 같은 느낌인듯 -->
+     <div class="container">
+        <div class="box b1">왼쪽 위</div>
+        <div class="box b2">중간</div>
+        <div class="box b3">오른쪽 아래</div>
+     </div>
+</body>
+</html>
