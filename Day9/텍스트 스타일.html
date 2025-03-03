@@ -1,10 +1,52 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>텍스트 스타일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap"
+        rel="stylesheet">
     <style>
+        @font-face {
+            font-family: 'GowunDodum-Regular';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Ownglyph_ParkDaHyun';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2411-3@1.0/Ownglyph_ParkDaHyun.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: "bitshow.off", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .custom_font {
+            font-family: "bitshow.off", serif;
+        }
+
+        .east-sea-dokdo-regular {
+            font-family: "East Sea Dokdo", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+
+        body {
+            /* font-family: 'GowunDodum-Regular'; */
+            font-family: "East Sea Dokdo", sans-serif;
+        }
+
         h1 {
             color: red;
             font-size: 50px;
@@ -14,6 +56,7 @@
             16px이랑 똑같이 맞춰지고 2em이면 32px이 된다 */
             /* rem > html의 기본 설정(최상위 요소)에 상대적인 크기가 정해짐 하지만 잘 사용하진 않음 */
         }
+
         p {
             font-weight: 900;
             /* 폰트의 굵기를 설정 해주는 것 */
@@ -26,75 +69,91 @@
             text-align: left;
             /* 텍스트 정렬 기본값이 left임 */
         }
+
         .text_align_center {
             text-align: center;
         }
+
         .text_align_right {
             text-align: right;
         }
+
         .span_container {
             text-align: center;
         }
+
         .right {
             text-align: right;
         }
+
         .center {
             text-align: center;
         }
 
         /* 버티컬 어라인 */
-        
+
         .vertical_container {
             font-size: 50px;
+            font-family: 'Ownglyph_ParkDaHyun';
         }
-        .vertical_1 > span {
+
+        .vertical_1>span {
             vertical-align: top;
             font-size: 16px;
             /* 텍스트 수직 정렬 */
         }
-        .vertical_2 > span {
+
+        .vertical_2>span {
             vertical-align: middle;
             font-size: 16px;
         }
-        .vertical_3 > span {
+
+        .vertical_3>span {
             vertical-align: bottom;
             font-size: 16px;
         }
 
         /* 텍스트 데코레이션 */
 
-        .link_box > a:nth-child(1) {
+        .link_box>a:nth-child(1) {
             text-decoration: none;
             /* 텍스트의 밑줄을 없애줌 */
         }
-        .link_box > a:nth-child(1):hover {
+
+        .link_box>a:nth-child(1):hover {
             text-decoration: underline;
             /* 마우스를 올렸을 때 밑줄이 생김 */
-        }.link_box > a:nth-child(1) {
+        }
+
+        .link_box>a:nth-child(1) {
             text-decoration: none;
             /* 텍스트의 밑줄을 없애줌 */
         }
-        .link_box > a:nth-child(2) {
+
+        .link_box>a:nth-child(2) {
             text-decoration: line-through;
             /* 취소선 */
         }
-        .link_box > a:last-child {
+
+        .link_box>a:last-child {
             text-decoration: overline;
             /* 위의 선 */
         }
 
         /* 라인 하이트 */
 
-        .line_height > p:first-child {
+        .line_height>p:first-child {
             line-height: 60px;
             /* 줄 높이 */
         }
-        .line_height > p:nth-child(2) {
+
+        .line_height>p:nth-child(2) {
             line-height: 1.5;
             /* 폰트 사이즈에 * height값 */
             font-size: 40px;
         }
-        .line_height > p:last-child {
+
+        .line_height>p:last-child {
             line-height: 500%;
             /* 폰트 크기 * 5 */
         }
@@ -105,13 +164,14 @@
             letter-spacing: 10px;
             /* 글자 사이의 간격 */
         }
+
         .letter_spacing_2 {
             letter-spacing: -10px;
             /* 음수도 가능 */
         }
-
     </style>
 </head>
+
 <body>
     <h1>
         텍스트 스타일
@@ -131,11 +191,11 @@
         <span class="text_align_right">오른쪽으로 갈거임</span>
     </p>
     <!-- 인라인 요소는 인라인이기 때문에 좌우센터에 대한 개념이 존재하지 않는다 그래서 한 번 블록으로 감싸고 이동을 시켜야 함 -->
-     <p class="center">
+    <p class="center">
         <span class="text_align_center">가운데에 있을거임</span>
-     </p>
+    </p>
 
-     <div class="vertical_container">
+    <div class="vertical_container">
         <p class="vertical_1">
             서브 텍스트 맨 위에 올거임
             <span>서브텍스트</span>
@@ -148,21 +208,26 @@
             서브 텍스트 맨 아래에 올거임
             <span>서브텍스트</span>
         </p>
-     </div>
+    </div>
 
-     <div class="link_box">
+    <div class="link_box">
         <a href="#">텍스트 데코레이션</a>
         <a href="#">텍스트 데코레이션</a>
         <a href="#">텍스트 데코레이션</a>
-     </div>
+    </div>
 
-     <div class="line_height">
+    <div class="line_height">
         <p>ling_hight 실습</p>
         <p>ling_hight 실습</p>
         <p>ling_hight 실습</p>
-     </div>
+    </div>
 
-     <p class="letter_spacing_1">자간을 설정합니다</p>
-     <p class="letter_spacing_2">자간을 설정합니다</p>
+    <p class="letter_spacing_1">자간을 설정합니다</p>
+    <p class="letter_spacing_2">자간을 설정합니다</p>
+
+    <p class="custom_font">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia temporibus assumenda tempore
+        consequuntur dolorem vero! Sed, iusto dolorem adipisci dolores maxime enim, ex nam doloremque at maiores,
+        expedita accusantium itaque.</p>
 </body>
+
 </html>
