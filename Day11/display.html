@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display</title>
+    <style>
+        .wrapper > span, 
+        .wrapper > div {
+            border: 1px solid #000;
+            margin: 10px;
+        }
+
+        .block_1 {
+            width: 500px;
+            height: 100px;
+            /* 인라인 태그는 높이 너비를 가질 수 없음 */
+        }
+
+        .block_2 {
+            display: block;
+            /* block을 주면 영역을 직접적으로 조절 할 수 있다 */
+            width: 500px;
+            height: 500px;
+
+        }
+
+        .inline_1 {
+            display: inline;
+            /* block속성에 inline을 부여함 */
+        }
+
+        .inline_block {
+            display: inline-block;
+            /* 인라인 블록은 인라인과 블록 특성을 전부 가진다 */
+        }
+
+        .inline_block_2 {
+            display: inline-block;
+            width: 500px;
+            height: 500px;
+            /* 인라인처럼 영역 만큼만 먹지만 크기를 조절 할 수 있음 */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="none"></div>
+
+        <span class="block_1">
+            inlien 속성 태드에 block을 부여함
+        </span>
+        <span class="block_2">
+            inlien 속성 태드에 block을 부여하고 witdth/height 값을 부여함
+        </span>
+
+        <div class="inline_1">
+            block속성에 inline을 부여함
+        </div>
+
+        <div class="inline_block">
+            인라인 블록이란?
+        </div>
+        <span class="inline_block_2">
+            인라인 태그에 인라인 블록 속성을 부여한 후 크기를 조절하면?
+        </span>
+    </div>
+</body>
+</html>

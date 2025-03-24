@@ -32,20 +32,29 @@
             line-height: 50px;
         }
         .b1 {
+            z-index: 999;
+            /* 포지션의 값이 존재해야 사용할 수 있다 */
             background-color: coral;
         }
 
         .b2 {
             background-color: cornflowerblue;
-            top: 50%;
+            top: 10px;
+            left: 50px;
+            z-index: 99;
+            /* 숫자는 1도 사용 가능하고 맨 뒤로 보내려면 음수도 가능하다
+            보통은 무조건 맨 위에 있어야 하는 친구는 999를 써주면 된다 */
+            /* top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); */
         }
 
         .b3 {
             background-color: darkolivegreen;
-            bottom: 0;
-            right: 0;
+            top: 30px;
+            left: 20px;
+            /* bottom: 0;
+            right: 0; */
         }
 
         .top_btn {

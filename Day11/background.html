@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background</title>
+    <style>
+        body {
+            height: 5000px;
+        }
+        .box_container > div {
+            width : 500px;
+            height : 500px;
+            margin: 50px;
+        }
+
+        .box_1 {
+            background-color: aqua;
+            /* 이런식으로 컬러를 설정하는건 임의로 설정할 때 제외하고 사용하지 않는 것이 좋음 */
+        }
+
+        .box_2 {
+            background: #fffeb7;
+            /* 얘는 헥스코드 */
+            /* 컬러 코드는 통일성 있게 하는게 좋음 헥스로 할거면 헥스로
+            rgb로 할거면 rgb로 해야함 */
+        }
+
+        .box_3 {
+            background-color: rgb(169, 161, 206);
+        }
+
+        .img_box {
+            background : url(./123449_145665_1147.png);
+            background-size: 150px;
+            background-repeat: no-repeat;
+            /* 이미지가 반복되지 않도록 하는것 */
+            background-position: bottom left;
+            /* 이미지의 위치를 지정하는 것 */
+        }
+
+        .img_box_2 {
+            background: url(./123449_145665_1147.png);
+            background-size: 70%;
+            background-repeat: repeat-y;
+            background-position: 15px;
+            /* 픽셀로 가면 가운데로 가는 성향이 있음 */
+            /* 가로축만 반복되는 것 y로 변경하면 세로만 반복됨 */
+        }
+
+        .img_box_3 {
+            background: url(./123449_145665_1147.png);
+            background-size: contain;
+            /* 이미지가 잘리지 않고 전체가 보임임 */
+        }
+
+        .img_box_4 {
+            background: url(./123449_145665_1147.png);
+            background-size: cover;
+            /* 이미지가 잘려서 보임 */
+            background-position: 50%;
+            /* 보여주는 위치 지정 */
+            background-attachment: fixed;
+            /* 약간 창문처럼 보이는 것 */
+        }
+
+        .gradient_box {
+            background: linear-gradient(135deg, red, orange, yellow);
+            /* 각도는 180이 기본으로 되어있음 검색해서 활용하면 됨 */
+            /* to bottom : 180 */
+            /* to right : 90 */
+            /* to left : 270 */
+            /* to top : 0 */
+        }
+
+        .gradient_box_2 {
+            background: radial-gradient(red, orange, yellow);
+        }
+
+        .gradient_box_3 {
+            background: conic-gradient(red, orange, yellow);
+        }
+        
+        .gradient_section {
+            background: linear-gradient(black 15%, gray, white);
+            height: 5000px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box_container">
+        <div class="box_1"></div>
+        <div class="box_2"></div>
+        <div class="box_3"></div>
+        <div class="img_box"></div>
+        <div class="img_box_2"></div>
+        <div class="img_box_3"></div>
+        <div class="img_box_4"></div>
+
+        <div class="gradient_box"></div>
+        <div class="gradient_box_2"></div>
+        <div class="gradient_box_3"></div>
+    </div>
+    <section class="gradient_section"></section>
+</body>
+</html>

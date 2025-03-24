@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex2</title>
+    <style>
+        .flex_flow_container {
+            border: 5px solid #000;
+            display: flex;
+            /* flex-wrap: wrap;
+            flex-direction: row-reverse; */
+            flex-flow: row-reverse wrap;
+            /* wrap이랑 direction을 한번에 세팅할 수 있는 것 */
+        }
+        .flow_item {
+            width: 300px;
+            height: 300px;
+            background-color: coral;
+            text-align: center;
+            line-height: 300px;
+            margin: 5px;
+        }
+        .justify_content > article > div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            margin: 10px;
+            text-align: center;
+            line-height: 100px;
+        }
+        /* 세로로도 가능하다 */
+
+        article {
+            display : flex;
+            border: 2px solid coral;
+            margin: 16px;
+        }
+
+        .start {
+            justify-content: flex-start;
+            /* 부모 요소에 flex가 없으면 애초에 먹지를 않지만 flex임을 명시하기 위해 flex를 앞에 적어두는 것이 좋음 */
+        }
+
+        .end {
+            justify-content: flex-end;
+        }
+
+        .center {
+            justify-content: center;
+            /* center은 앞에 flex를 못쓴다 */
+        }
+
+        .between {
+            justify-content: space-between;
+            /* 피그마 플렉스 느낌 */
+        }
+
+        .around {
+            justify-content: space-around;
+        }
+
+        .evenly {
+            justify-content: space-evenly;
+        }
+    </style>
+</head>
+<body>
+    <section class="flex_flow_container">
+        <div class="flow_item">1</div>
+        <div class="flow_item">2</div>
+        <div class="flow_item">3</div>
+        <div class="flow_item">4</div>
+        <div class="flow_item">5</div>
+        <div class="flow_item">6</div>
+        <div class="flow_item">7</div>
+        <div class="flow_item">8</div>
+    </section>
+
+    <section class="justify_content">
+        <article class="start">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </article>
+        <article class="end">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </article>
+        <article class="center">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </article>
+        <article class="between">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </article>
+        <article class="around">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </article>
+        <article class="evenly">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </article>
+    </section>
+    <!-- 
+        flex 속성
+        1. 속성을 부여할 컨테이너가 필요하다 : section/article/div 등
+        2. 가로정렬 할 아이템들을 컨테이너로 묶어주면 된다
+        3. 부모요소의 컨테이너에 display: flex;를 주면 된다
+        4. wrap : 아이템들이 부모 요소 영역을 넘어가면 width가 작아진다
+        width가 작아지는 것이 싫으면 줄바꿈 해서 밑으로 내려가게 해준다
+        5. direction 기본값은 row / 세로는 cloumn / 역순 : row-reverse / cloumn-reverse
+        6. flex-flow : direction과 wrap을 한번에 설정할 수 있다
+        7. justify-content
+        start : 왼쪽 정렬
+        end : 오른쪽 정렬
+        center : 가운데 정렬
+        space-between : 양쪽 끝 여백 없이 콘텐츠 끼리 나눠먹기
+        space-around : 콘텐츠 기준으로 여백이 생겨서 1 2 2 1 구조로 여백이 존재함
+        space-evenly : 양쪽 끝도 같은 비율로 여백을 나눠먹음
+    -->
+</body>
+</html>

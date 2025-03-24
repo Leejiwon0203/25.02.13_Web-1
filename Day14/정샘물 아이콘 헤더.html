@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정샘물 아이콘 헤더</title>
+    <script src="https://kit.fontawesome.com/15aa53eece.js" crossorigin="anonymous"></script>
+    <style>
+        body,
+        figure {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+            padding: 16px 32px;
+        }
+
+        figure>img {
+            width: 258px;
+        }
+
+        .menu_icon {
+            color: #fff;
+            display: flex;
+            align-items: center;
+        }
+
+        .menu_icon>i,
+        .menu_icon>img {
+            padding: 16px;
+        }
+        .main_img {
+            background: url(./정샘물\ 이미지.jpg);
+            /* style로 넣는 이미지는 html 태그로 넣는 이미지랑은 다름
+            img에 a태그를 연결해서 넘어가는 이미지는 html이고
+            그냥 깔아주는 이미지는 background 이미지로 사용하는 것임 */
+            height: 890px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="main_img">
+        <header>
+            <figure class="logo">
+                <img src="./정샘물로고.png" alt="">
+            </figure>
+            <div class="menu_icon">
+                <i class="fa-solid fa-magnifying-glass fa-2xl"></i>
+                <i class="fa-solid fa-cart-shopping fa-2xl"></i>
+                <i class="fa-solid fa-user fa-2xl"></i>
+                <i class="fa-solid fa-globe fa-2xl"></i>
+                <img src="./메뉴 아이콘.png" alt="">
+                <!-- 폰트 어썸으로 가져오는건 검색해서 사이즈 조절해야함 -->
+                <!-- i 태그는 원래 기울임 태그지만 바뀔 수 있음
+              이런식으로 원하는 태그를 마음대로 제작해서 만들 수 있다
+              속성만 부여해주면 된다 -->
+            </div>
+        </header>
+    </section>
+</body>
+
+</html>
