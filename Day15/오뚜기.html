@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오뚜기</title>
+    <style>
+        section {
+            display: flex;
+            width: 100%;
+        }
+
+        .box {
+            width: 40%;
+            height: 500px;
+            margin: 10px;
+            border: 1px solid black;
+            padding: 16px;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            /* flex-direction: column;
+            justify-content: center; */
+            transition: 0.5s;
+            background-size: cover;
+            position: relative;
+            /* 얘를 기준으로 하겠다 */
+        }
+
+        .box:nth-child(1) {
+            background-image: url(./스티키.jpg);
+            background-color: darkkhaki;
+        }
+
+        .box:nth-child(2) {
+            background-image: url(./스티키\ 수업용.jpg);
+            background-color: darkkhaki;
+        }
+
+        .box:nth-child(3) {
+            background-image: url(./정샘물\ 이미지.jpg);
+            background-color: darkkhaki;
+        }
+
+        .box:hover {
+            flex-shrink: 0;
+            background-size: cover;
+            /* 커졌다 작아졌다 할 때 사이즈 변화가 있는걸 방지하기 위해 */
+        }
+
+        .black {
+            background-color: black;
+            width: 100%;
+            position: absolute;
+            height: 532px;
+            top: 0;
+            left: 0;
+            opacity: 0.3;
+            border-radius: 25px;
+            transition: 0.5s;
+        }
+
+        .box:hover .black {
+            opacity: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <article class="box">
+            <div class="black"></div>
+            <div class="text_area">
+                <p>Environmental</p>
+                <h2>환경</h2>
+            </div>
+        </article>
+        <article class="box">
+            <div class="black"></div>
+            <div class="text_area">
+                <p>Social</p>
+                <h2>사회</h2>
+            </div>
+        </article>
+        <article class="box">
+            <div class="black"></div>
+            <div class="text_area">
+                <p>Governance</p>
+                <h2>지배구조</h2>
+            </div>
+        </article>
+    </section>
+</body>
+</html>

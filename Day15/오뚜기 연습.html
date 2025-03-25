@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=!, initial-scale=1.0">
+    <title>오뚜기 연습</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .text_box {
+            font-size: 24px;
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+        }
+        article {
+            background-color: black;
+            width: 50%;
+            height: 350px;
+            border-radius: 16px;
+            margin: 16px;
+            flex-shrink: 1;
+        }
+        .text {
+            color: white;
+            margin-left: 30px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+        }
+        article:hover :nth-child(1) {
+                flex-shrink: 0;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 300;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+            <article>
+                <figure class="img_box"></figure>
+                <div class="text">
+                    <h3>Environmental</h3>
+                    <h2>환경</h2>
+                </div>
+                <figure class="icon"></figure>
+            </article>
+            <article>
+                <figure class="img_box"></figure>
+                <div class="text">
+                    <h3>Social</h3>
+                    <h2>사회</h2>
+                </div>
+                <figure class="icon"></figure>
+            </article>
+            <article>
+                <figure class="img_box"></figure>
+                <div class="text">
+                    <h3>Governance</h3>
+                    <h2>지배구조</h2>
+                </div>
+                <figure class="icon"></figure>
+            </article>
+    </section>
+</body>
+
+</html>
